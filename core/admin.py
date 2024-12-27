@@ -7,4 +7,4 @@ class EventAdmin(admin.ModelAdmin):
 
 @admin.register(ScannedQR)
 class ScannedQRAdmin(admin.ModelAdmin):
-    list_display = ('id', 'event', 'is_scanned')
+    list_display = ('id', 'unique_id', 'event', 'is_scanned')
