@@ -17,8 +17,15 @@ SECRET_KEY = 'django-insecure-6&t_w*(f5!c5=t59=c=vnnk6ui=a!e79@z@q2hpu)ugzreye)-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net"]
-
+ALLOWED_HOSTS = [
+    "cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net"
+]
+CSRF_ALLOWED_ORIGINS = [
+    "https://cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net"
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net"
+]
 
 # Application definition
 INSTALLED_APPS = [
