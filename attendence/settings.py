@@ -15,16 +15,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6&t_w*(f5!c5=t59=c=vnnk6ui=a!e79@z@q2hpu)ugzreye)-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    "cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net"
+    "cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net",
+    "localhost",
+    "127.0.0.1"
 ]
 CSRF_ALLOWED_ORIGINS = [
-    "https://cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net"
+    "https://cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net",
+    "http://localhost",
+    "http://127.0.0.1"
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net"
+    "https://cs50smartattendance-c5huhqgygxacddfx.eastasia-01.azurewebsites.net",
+    "http://localhost",
+    "http://127.0.0.1"
 ]
 
 # Application definition
@@ -135,3 +141,7 @@ TIME_ZONE = 'Asia/Kathmandu'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Also add CSRF_COOKIE_SECURE and SESSION_COOKIE_SECURE
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
